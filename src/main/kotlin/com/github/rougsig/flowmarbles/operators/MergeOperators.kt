@@ -1,12 +1,9 @@
 package com.github.rougsig.flowmarbles.operators
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 
-@FlowPreview
-@ExperimentalCoroutinesApi
+
 fun mergeOperators() = listOf(
   menuItem(header("merge"), null),
   menuItem(

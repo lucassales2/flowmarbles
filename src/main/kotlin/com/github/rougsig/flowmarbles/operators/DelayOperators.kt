@@ -1,12 +1,8 @@
 package com.github.rougsig.flowmarbles.operators
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.sample
 
-@FlowPreview
-@ExperimentalCoroutinesApi
 fun delayOperators() = listOf(
   menuItem(header("delay"), null),
   menuItem(

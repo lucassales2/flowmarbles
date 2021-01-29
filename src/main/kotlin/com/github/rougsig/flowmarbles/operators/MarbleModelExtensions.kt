@@ -45,7 +45,6 @@ fun <T : Any> sandbox(
   )
 }
 
-@ExperimentalCoroutinesApi
 fun menuItem(
   label: Menu.Model.Item,
   sandBox: SandBox.Model<Any>?

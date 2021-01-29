@@ -1,17 +1,26 @@
 plugins {
-  id 'org.jetbrains.kotlin.js' version '1.4.0'
+    id 'org.jetbrains.kotlin.js' version '1.4.21'
 }
 
 group 'com.github.rougsig.flowmarbles'
 version '1.0.0'
 
 repositories {
-  mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
-  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.3.9"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.4.2'
+}
+
+kotlin {
+    js(IR) {
+        compilations.all {
+            compileKotlinTask.kotlinOptions.freeCompilerArgs += "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi"
+            compileKotlinTask.kotlinOptions.freeCompilerArgs += "-Xuse-experimental=kotlinx.coroutines.FlowPreview"
+        }
+    }
 }
 
 kotlin.target.browser {}

@@ -1,11 +1,7 @@
 package com.github.rougsig.flowmarbles.operators
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 
-@FlowPreview
-@ExperimentalCoroutinesApi
 fun distinctOperators() = listOf(
   menuItem(header("distinct"), null),
   menuItem(

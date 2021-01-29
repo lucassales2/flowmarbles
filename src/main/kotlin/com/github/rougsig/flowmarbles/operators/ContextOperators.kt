@@ -1,13 +1,10 @@
 package com.github.rougsig.flowmarbles.operators
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.flow.onEach
 
-@FlowPreview
-@ExperimentalCoroutinesApi
+
 fun contextOperators() = listOf(
   menuItem(header("context"), null),
   menuItem(
